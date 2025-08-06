@@ -1,2 +1,10 @@
 [build]
 builder = "NIXPACKS"
+buildCommand = "bundle install"
+
+[deploy]
+startCommand = "rails server -b 0.0.0.0 -p $PORT"
+
+[env]
+RAILS_ENV = "production"
+RAILS_LOG_TO_STDOUT = "true"
